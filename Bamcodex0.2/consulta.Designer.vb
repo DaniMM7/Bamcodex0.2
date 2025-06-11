@@ -26,9 +26,9 @@ Partial Class consulta
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Saldoact = New System.Windows.Forms.Label()
+        Me.SaldoCajero = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -79,36 +79,6 @@ Partial Class consulta
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Disponible en cajero :"
         '
-        'Button8
-        '
-        Me.Button8.BackColor = System.Drawing.Color.Transparent
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button8.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(314, 232)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(371, 51)
-        Me.Button8.TabIndex = 28
-        Me.Button8.Text = "$ 0.0"
-        Me.Button8.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(314, 386)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(371, 52)
-        Me.Button1.TabIndex = 29
-        Me.Button1.Text = "Billetes de 100, 200, y 500"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Black
@@ -124,6 +94,24 @@ Partial Class consulta
         Me.Button2.Text = "SALIR"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'Saldoact
+        '
+        Me.Saldoact.AutoSize = True
+        Me.Saldoact.Location = New System.Drawing.Point(495, 253)
+        Me.Saldoact.Name = "Saldoact"
+        Me.Saldoact.Size = New System.Drawing.Size(48, 16)
+        Me.Saldoact.TabIndex = 31
+        Me.Saldoact.Text = "Label4"
+        '
+        'SaldoCajero
+        '
+        Me.SaldoCajero.AutoSize = True
+        Me.SaldoCajero.Location = New System.Drawing.Point(498, 403)
+        Me.SaldoCajero.Name = "SaldoCajero"
+        Me.SaldoCajero.Size = New System.Drawing.Size(48, 16)
+        Me.SaldoCajero.TabIndex = 32
+        Me.SaldoCajero.Text = "Label6"
+        '
         'consulta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -131,9 +119,9 @@ Partial Class consulta
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_020704
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1035, 583)
+        Me.Controls.Add(Me.SaldoCajero)
+        Me.Controls.Add(Me.Saldoact)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -150,7 +138,7 @@ Partial Class consulta
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents Saldoact As Label
+    Friend WithEvents SaldoCajero As Label
 End Class

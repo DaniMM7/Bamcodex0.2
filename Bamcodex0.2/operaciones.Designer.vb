@@ -33,8 +33,8 @@ Partial Class operaciones
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.txtNom = New System.Windows.Forms.Label()
+        Me.txtSaldo = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -190,35 +190,29 @@ Partial Class operaciones
         Me.Button7.Text = "CONSULTAR"
         Me.Button7.UseVisualStyleBackColor = False
         '
-        'Button8
+        'txtNom
         '
-        Me.Button8.BackColor = System.Drawing.Color.Transparent
-        Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button8.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button8.Location = New System.Drawing.Point(-3, 175)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(315, 39)
-        Me.Button8.TabIndex = 27
-        Me.Button8.Text = "Nombre del cliente"
-        Me.Button8.UseVisualStyleBackColor = False
+        Me.txtNom.AutoSize = True
+        Me.txtNom.BackColor = System.Drawing.Color.Transparent
+        Me.txtNom.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNom.ForeColor = System.Drawing.Color.White
+        Me.txtNom.Location = New System.Drawing.Point(12, 184)
+        Me.txtNom.Name = "txtNom"
+        Me.txtNom.Size = New System.Drawing.Size(18, 27)
+        Me.txtNom.TabIndex = 27
+        Me.txtNom.Text = " "
         '
-        'Button9
+        'txtSaldo
         '
-        Me.Button9.BackColor = System.Drawing.Color.Transparent
-        Me.Button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button9.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button9.Location = New System.Drawing.Point(-3, 263)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(315, 39)
-        Me.Button9.TabIndex = 28
-        Me.Button9.Text = "$ 00.00"
-        Me.Button9.UseVisualStyleBackColor = False
+        Me.txtSaldo.AutoSize = True
+        Me.txtSaldo.BackColor = System.Drawing.Color.Transparent
+        Me.txtSaldo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSaldo.ForeColor = System.Drawing.Color.White
+        Me.txtSaldo.Location = New System.Drawing.Point(12, 270)
+        Me.txtSaldo.Name = "txtSaldo"
+        Me.txtSaldo.Size = New System.Drawing.Size(18, 27)
+        Me.txtSaldo.TabIndex = 28
+        Me.txtSaldo.Text = " "
         '
         'operaciones
         '
@@ -228,8 +222,8 @@ Partial Class operaciones
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_09_003444
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1089, 545)
-        Me.Controls.Add(Me.Button9)
-        Me.Controls.Add(Me.Button8)
+        Me.Controls.Add(Me.txtSaldo)
+        Me.Controls.Add(Me.txtNom)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Button5)
@@ -260,6 +254,6 @@ Partial Class operaciones
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button7 As Button
-    Friend WithEvents Button8 As Button
-    Friend WithEvents Button9 As Button
+    Friend WithEvents txtNom As Label
+    Friend WithEvents txtSaldo As Label
 End Class

@@ -22,7 +22,19 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Nulshock", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.Tomato
+        Me.Button1.Location = New System.Drawing.Point(320, 375)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(205, 79)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Empezar"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -30,7 +42,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_08_002926
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(903, 476)
+        Me.ClientSize = New System.Drawing.Size(903, 494)
+        Me.Controls.Add(Me.Button1)
         Me.DoubleBuffered = True
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -38,4 +51,5 @@ Partial Class Form1
 
     End Sub
 
+    Friend WithEvents Button1 As Button
 End Class

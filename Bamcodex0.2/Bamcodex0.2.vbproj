@@ -73,6 +73,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cargar.vb" />
     <Compile Include="Confirmar.Designer.vb">
       <DependentUpon>Confirmar.vb</DependentUpon>
     </Compile>

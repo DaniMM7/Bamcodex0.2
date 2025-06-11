@@ -41,7 +41,7 @@ Partial Class Retirar
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(57, 39)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(188, 48)
+        Me.Label1.Size = New System.Drawing.Size(182, 48)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "RETIRAR"
         '
