@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD8718DB-939B-4C82-A13D-D89B3A4CE050}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Bamcodex0._2.My.MyApplication</StartupObject>
+    <RootNamespace>Bamcodex0._2</RootNamespace>
+    <AssemblyName>Bamcodex0.2</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Bamcodex0.2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Bamcodex0.2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Confirmar.Designer.vb">
+      <DependentUpon>Confirmar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Confirmar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consulta.Designer.vb">
+      <DependentUpon>consulta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="consulta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Depositar.Designer.vb">
+      <DependentUpon>Depositar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Depositar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="operaciones.Designer.vb">
+      <DependentUpon>operaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="operaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retirar.Designer.vb">
+      <DependentUpon>Retirar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Retirar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios.Designer.vb">
+      <DependentUpon>Servicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Servicios2.Designer.vb">
+      <DependentUpon>Servicios2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Servicios2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tarjeta.Designer.vb">
+      <DependentUpon>tarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="tarjeta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transferir.Designer.vb">
+      <DependentUpon>Transferir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transferir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Confirmar.resx">
+      <DependentUpon>Confirmar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consulta.resx">
+      <DependentUpon>consulta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Depositar.resx">
+      <DependentUpon>Depositar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="operaciones.resx">
+      <DependentUpon>operaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retirar.resx">
+      <DependentUpon>Retirar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicios.resx">
+      <DependentUpon>Servicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Servicios2.resx">
+      <DependentUpon>Servicios2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tarjeta.resx">
+      <DependentUpon>tarjeta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transferir.resx">
+      <DependentUpon>Transferir.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-08 002926.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-08 003604.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-08 003804.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-09 003444.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preguntas-mas-frecuentes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preguntas-mas-frecuentes %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preguntas-mas-frecuentes %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transferir-dinero.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\retirar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caridad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 020704.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 021622.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 021807.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 022550.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 023527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 024106.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla 2025-06-11 024634.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
