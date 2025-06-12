@@ -43,10 +43,9 @@ Partial Class operaciones
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(338, 30)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Location = New System.Drawing.Point(451, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(399, 27)
+        Me.Label1.Size = New System.Drawing.Size(494, 33)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "¿QUÉ OPERACIÓN DESEA REALIZAR? "
         '
@@ -56,10 +55,9 @@ Partial Class operaciones
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(49, 106)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Location = New System.Drawing.Point(65, 130)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(162, 25)
+        Me.Label2.Size = New System.Drawing.Size(205, 31)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "¡Bienvenido(a)!"
         '
@@ -69,20 +67,18 @@ Partial Class operaciones
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Britannic Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(56, 186)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label3.Location = New System.Drawing.Point(75, 229)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(133, 25)
+        Me.Label3.Size = New System.Drawing.Size(167, 31)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Saldo actual"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(262, 89)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Location = New System.Drawing.Point(349, 110)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(0, 13)
+        Me.Label11.Size = New System.Drawing.Size(0, 16)
         Me.Label11.TabIndex = 16
         '
         'Button1
@@ -94,10 +90,10 @@ Partial Class operaciones
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Image = Global.Bamcodex0._2.My.Resources.Resources.preguntas_mas_frecuentes__2_
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(259, 80)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button1.Location = New System.Drawing.Point(345, 98)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(236, 81)
+        Me.Button1.Size = New System.Drawing.Size(315, 100)
         Me.Button1.TabIndex = 19
         Me.Button1.Text = "CONSULTAR"
         Me.Button1.UseVisualStyleBackColor = False
@@ -108,10 +104,10 @@ Partial Class operaciones
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Bernard MT Condensed", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(639, 367)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button2.Location = New System.Drawing.Point(852, 452)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(178, 70)
+        Me.Button2.Size = New System.Drawing.Size(237, 86)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = False
@@ -125,10 +121,10 @@ Partial Class operaciones
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.Image = Global.Bamcodex0._2.My.Resources.Resources.retirar
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button4.Location = New System.Drawing.Point(520, 80)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button4.Location = New System.Drawing.Point(693, 98)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(241, 81)
+        Me.Button4.Size = New System.Drawing.Size(321, 100)
         Me.Button4.TabIndex = 22
         Me.Button4.Text = "RETIRAR"
         Me.Button4.UseVisualStyleBackColor = False
@@ -142,10 +138,10 @@ Partial Class operaciones
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Image = Global.Bamcodex0._2.My.Resources.Resources.transferir_dinero
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(259, 176)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button3.Location = New System.Drawing.Point(345, 217)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(236, 81)
+        Me.Button3.Size = New System.Drawing.Size(315, 100)
         Me.Button3.TabIndex = 23
         Me.Button3.Text = "TRANSFERIR"
         Me.Button3.UseVisualStyleBackColor = False
@@ -159,10 +155,10 @@ Partial Class operaciones
         Me.Button5.ForeColor = System.Drawing.Color.White
         Me.Button5.Image = Global.Bamcodex0._2.My.Resources.Resources.depositar
         Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(259, 267)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button5.Location = New System.Drawing.Point(345, 329)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(236, 81)
+        Me.Button5.Size = New System.Drawing.Size(315, 100)
         Me.Button5.TabIndex = 24
         Me.Button5.Text = "DEPOSITAR"
         Me.Button5.UseVisualStyleBackColor = False
@@ -176,10 +172,10 @@ Partial Class operaciones
         Me.Servicios.ForeColor = System.Drawing.Color.White
         Me.Servicios.Image = Global.Bamcodex0._2.My.Resources.Resources.hotel
         Me.Servicios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Servicios.Location = New System.Drawing.Point(520, 176)
-        Me.Servicios.Margin = New System.Windows.Forms.Padding(2)
+        Me.Servicios.Location = New System.Drawing.Point(693, 217)
+        Me.Servicios.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Servicios.Name = "Servicios"
-        Me.Servicios.Size = New System.Drawing.Size(241, 81)
+        Me.Servicios.Size = New System.Drawing.Size(321, 100)
         Me.Servicios.TabIndex = 25
         Me.Servicios.Text = "SERVICIOS"
         Me.Servicios.UseVisualStyleBackColor = False
@@ -193,10 +189,10 @@ Partial Class operaciones
         Me.Button7.ForeColor = System.Drawing.Color.White
         Me.Button7.Image = Global.Bamcodex0._2.My.Resources.Resources.caridad
         Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.Location = New System.Drawing.Point(520, 267)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
+        Me.Button7.Location = New System.Drawing.Point(693, 329)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(241, 81)
+        Me.Button7.Size = New System.Drawing.Size(321, 100)
         Me.Button7.TabIndex = 26
         Me.Button7.Text = "CONSULTAR"
         Me.Button7.UseVisualStyleBackColor = False
@@ -207,10 +203,9 @@ Partial Class operaciones
         Me.txtNom.BackColor = System.Drawing.Color.Transparent
         Me.txtNom.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNom.ForeColor = System.Drawing.Color.White
-        Me.txtNom.Location = New System.Drawing.Point(9, 150)
-        Me.txtNom.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.txtNom.Location = New System.Drawing.Point(12, 185)
         Me.txtNom.Name = "txtNom"
-        Me.txtNom.Size = New System.Drawing.Size(15, 22)
+        Me.txtNom.Size = New System.Drawing.Size(18, 27)
         Me.txtNom.TabIndex = 27
         Me.txtNom.Text = " "
         '
@@ -220,21 +215,20 @@ Partial Class operaciones
         Me.txtSaldo.BackColor = System.Drawing.Color.Transparent
         Me.txtSaldo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtSaldo.ForeColor = System.Drawing.Color.White
-        Me.txtSaldo.Location = New System.Drawing.Point(9, 219)
-        Me.txtSaldo.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.txtSaldo.Location = New System.Drawing.Point(12, 270)
         Me.txtSaldo.Name = "txtSaldo"
-        Me.txtSaldo.Size = New System.Drawing.Size(15, 22)
+        Me.txtSaldo.Size = New System.Drawing.Size(18, 27)
         Me.txtSaldo.TabIndex = 28
         Me.txtSaldo.Text = " "
         '
         'operaciones
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.HotTrack
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_09_003444
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(817, 443)
+        Me.ClientSize = New System.Drawing.Size(1089, 545)
         Me.Controls.Add(Me.txtSaldo)
         Me.Controls.Add(Me.txtNom)
         Me.Controls.Add(Me.Button7)
@@ -249,7 +243,7 @@ Partial Class operaciones
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "operaciones"
         Me.Text = "operaciones"
         Me.ResumeLayout(False)

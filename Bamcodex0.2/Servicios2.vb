@@ -62,5 +62,5 @@ Public Class Servicios2
         ' Lógica de pago...
     End Sub
 
-    End Sub
+
 End Class
