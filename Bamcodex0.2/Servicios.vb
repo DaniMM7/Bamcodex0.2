@@ -31,7 +31,7 @@
 
     ' Este botón "Continuar" puedes usarlo si ya hay una selección previa
     Private Sub Continuar_Click(sender As Object, e As EventArgs) Handles Continuar.Click
-        AbrirFormularioServicios2("01001") ' puedes modificar esto si seleccionas desde combo u otro lugar
+        AbrirFormularioServicios2("01001") ' puedes modificar esto si seleccionas desde combo u otro espacio
     End Sub
 
 End Class
