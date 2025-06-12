@@ -27,10 +27,10 @@ Partial Class Servicios2
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.RealizarPago = New System.Windows.Forms.Button()
+        Me.NomEmpresa = New System.Windows.Forms.ComboBox()
+        Me.Referencia = New System.Windows.Forms.TextBox()
+        Me.Importe = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -98,61 +98,45 @@ Partial Class Servicios2
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Importe a pagar :"
         '
-        'Button2
+        'RealizarPago
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(255, 263)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(308, 43)
-        Me.Button2.TabIndex = 34
-        Me.Button2.Text = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.RealizarPago.BackColor = System.Drawing.Color.Transparent
+        Me.RealizarPago.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.RealizarPago.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.RealizarPago.Font = New System.Drawing.Font("Britannic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RealizarPago.ForeColor = System.Drawing.Color.White
+        Me.RealizarPago.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.RealizarPago.Location = New System.Drawing.Point(606, 389)
+        Me.RealizarPago.Margin = New System.Windows.Forms.Padding(2)
+        Me.RealizarPago.Name = "RealizarPago"
+        Me.RealizarPago.Size = New System.Drawing.Size(249, 83)
+        Me.RealizarPago.TabIndex = 36
+        Me.RealizarPago.Text = "Realizar pago"
+        Me.RealizarPago.UseVisualStyleBackColor = False
         '
-        'Button3
+        'NomEmpresa
         '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(262, 351)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(301, 43)
-        Me.Button3.TabIndex = 35
-        Me.Button3.Text = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.NomEmpresa.FormattingEnabled = True
+        Me.NomEmpresa.Location = New System.Drawing.Point(262, 192)
+        Me.NomEmpresa.Name = "NomEmpresa"
+        Me.NomEmpresa.Size = New System.Drawing.Size(301, 21)
+        Me.NomEmpresa.TabIndex = 37
         '
-        'Button4
+        'Referencia
         '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Britannic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(606, 389)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(249, 83)
-        Me.Button4.TabIndex = 36
-        Me.Button4.Text = "Realizar pago"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.Referencia.Location = New System.Drawing.Point(262, 271)
+        Me.Referencia.Multiline = True
+        Me.Referencia.Name = "Referencia"
+        Me.Referencia.Size = New System.Drawing.Size(301, 33)
+        Me.Referencia.TabIndex = 38
         '
-        'ComboBox1
+        'Importe
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(255, 192)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(308, 21)
-        Me.ComboBox1.TabIndex = 37
+        Me.Importe.Location = New System.Drawing.Point(262, 356)
+        Me.Importe.Multiline = True
+        Me.Importe.Name = "Importe"
+        Me.Importe.Size = New System.Drawing.Size(301, 34)
+        Me.Importe.TabIndex = 39
         '
         'Servicios2
         '
@@ -161,17 +145,17 @@ Partial Class Servicios2
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_024634
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(856, 474)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Importe)
+        Me.Controls.Add(Me.Referencia)
+        Me.Controls.Add(Me.NomEmpresa)
+        Me.Controls.Add(Me.RealizarPago)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Servicios2"
         Me.Text = "Servicios2"
         Me.ResumeLayout(False)
@@ -184,8 +168,8 @@ Partial Class Servicios2
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents RealizarPago As Button
+    Friend WithEvents NomEmpresa As ComboBox
+    Friend WithEvents Referencia As TextBox
+    Friend WithEvents Importe As TextBox
 End Class

@@ -73,4 +73,10 @@ Public Class operaciones
         consulta.Show()
 
     End Sub
+
+    Private Sub Servicios_Click(sender As Object, e As EventArgs) Handles Servicios.Click
+        Dim formServicios As New Servicios()
+        formServicios.Show()
+        Me.Hide()
+    End Sub
 End Class
