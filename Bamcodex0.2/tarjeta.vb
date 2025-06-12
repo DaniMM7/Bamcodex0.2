@@ -64,4 +64,5 @@ Public Class tarjeta
         txtPIN.Clear()
         txtNumTarjeta.Clear()
     End Sub
+
 End Class

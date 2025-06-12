@@ -30,7 +30,7 @@ Partial Class Servicios2
         Me.RealizarPago = New System.Windows.Forms.Button()
         Me.NomEmpresa = New System.Windows.Forms.ComboBox()
         Me.Referencia = New System.Windows.Forms.TextBox()
-        Me.Importe = New System.Windows.Forms.TextBox()
+        Me.Monto = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -130,13 +130,13 @@ Partial Class Servicios2
         Me.Referencia.Size = New System.Drawing.Size(301, 33)
         Me.Referencia.TabIndex = 38
         '
-        'Importe
+        'Monto
         '
-        Me.Importe.Location = New System.Drawing.Point(262, 356)
-        Me.Importe.Multiline = True
-        Me.Importe.Name = "Importe"
-        Me.Importe.Size = New System.Drawing.Size(301, 34)
-        Me.Importe.TabIndex = 39
+        Me.Monto.Location = New System.Drawing.Point(262, 356)
+        Me.Monto.Multiline = True
+        Me.Monto.Name = "Monto"
+        Me.Monto.Size = New System.Drawing.Size(301, 34)
+        Me.Monto.TabIndex = 39
         '
         'Servicios2
         '
@@ -145,7 +145,7 @@ Partial Class Servicios2
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_024634
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(856, 474)
-        Me.Controls.Add(Me.Importe)
+        Me.Controls.Add(Me.Monto)
         Me.Controls.Add(Me.Referencia)
         Me.Controls.Add(Me.NomEmpresa)
         Me.Controls.Add(Me.RealizarPago)
@@ -171,5 +171,5 @@ Partial Class Servicios2
     Friend WithEvents RealizarPago As Button
     Friend WithEvents NomEmpresa As ComboBox
     Friend WithEvents Referencia As TextBox
-    Friend WithEvents Importe As TextBox
+    Friend WithEvents Monto As TextBox
 End Class
