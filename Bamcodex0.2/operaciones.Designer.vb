@@ -32,7 +32,7 @@ Partial Class operaciones
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Servicios = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Movi = New System.Windows.Forms.Button()
         Me.txtNom = New System.Windows.Forms.Label()
         Me.txtSaldo = New System.Windows.Forms.Label()
         Me.SuspendLayout()
@@ -180,22 +180,22 @@ Partial Class operaciones
         Me.Servicios.Text = "SERVICIOS"
         Me.Servicios.UseVisualStyleBackColor = False
         '
-        'Button7
+        'Movi
         '
-        Me.Button7.BackColor = System.Drawing.Color.Transparent
-        Me.Button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button7.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Image = Global.Bamcodex0._2.My.Resources.Resources.caridad
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button7.Location = New System.Drawing.Point(693, 329)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(321, 100)
-        Me.Button7.TabIndex = 26
-        Me.Button7.Text = "CONSULTAR"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Movi.BackColor = System.Drawing.Color.Transparent
+        Me.Movi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.Movi.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Movi.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Movi.ForeColor = System.Drawing.Color.White
+        Me.Movi.Image = Global.Bamcodex0._2.My.Resources.Resources.caridad
+        Me.Movi.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Movi.Location = New System.Drawing.Point(693, 329)
+        Me.Movi.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Movi.Name = "Movi"
+        Me.Movi.Size = New System.Drawing.Size(321, 100)
+        Me.Movi.TabIndex = 26
+        Me.Movi.Text = "MOVIMIENTOS"
+        Me.Movi.UseVisualStyleBackColor = False
         '
         'txtNom
         '
@@ -231,7 +231,7 @@ Partial Class operaciones
         Me.ClientSize = New System.Drawing.Size(1089, 545)
         Me.Controls.Add(Me.txtSaldo)
         Me.Controls.Add(Me.txtNom)
-        Me.Controls.Add(Me.Button7)
+        Me.Controls.Add(Me.Movi)
         Me.Controls.Add(Me.Servicios)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button3)
@@ -261,7 +261,7 @@ Partial Class operaciones
     Friend WithEvents Button3 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Servicios As Button
-    Friend WithEvents Button7 As Button
+    Friend WithEvents Movi As Button
     Friend WithEvents txtNom As Label
     Friend WithEvents txtSaldo As Label
 End Class

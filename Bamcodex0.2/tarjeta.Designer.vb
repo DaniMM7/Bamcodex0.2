@@ -24,10 +24,11 @@ Partial Class tarjeta
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.txtNumTarjeta = New System.Windows.Forms.TextBox()
         Me.txtPIN = New System.Windows.Forms.TextBox()
+        Me.retirost = New System.Windows.Forms.Button()
+        Me.volver = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -52,27 +53,12 @@ Partial Class tarjeta
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button2.Location = New System.Drawing.Point(233, 330)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(156, 36)
         Me.Button2.TabIndex = 35
         Me.Button2.Text = "ELIMINAR"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Salmon
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(413, 330)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(147, 36)
-        Me.Button3.TabIndex = 36
-        Me.Button3.Text = "CANCELAR"
-        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
@@ -84,6 +70,7 @@ Partial Class tarjeta
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button4.Location = New System.Drawing.Point(233, 372)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(327, 36)
         Me.Button4.TabIndex = 37
@@ -94,17 +81,41 @@ Partial Class tarjeta
         '
         Me.txtNumTarjeta.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNumTarjeta.Location = New System.Drawing.Point(537, 34)
+        Me.txtNumTarjeta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtNumTarjeta.Name = "txtNumTarjeta"
-        Me.txtNumTarjeta.Size = New System.Drawing.Size(470, 42)
+        Me.txtNumTarjeta.Size = New System.Drawing.Size(471, 42)
         Me.txtNumTarjeta.TabIndex = 38
         '
         'txtPIN
         '
         Me.txtPIN.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPIN.Location = New System.Drawing.Point(416, 282)
+        Me.txtPIN.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.txtPIN.Name = "txtPIN"
         Me.txtPIN.Size = New System.Drawing.Size(144, 42)
         Me.txtPIN.TabIndex = 39
+        '
+        'retirost
+        '
+        Me.retirost.CausesValidation = False
+        Me.retirost.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.retirost.Location = New System.Drawing.Point(806, 455)
+        Me.retirost.Name = "retirost"
+        Me.retirost.Size = New System.Drawing.Size(214, 55)
+        Me.retirost.TabIndex = 40
+        Me.retirost.Text = "Retiro sin tarjeta"
+        Me.retirost.UseVisualStyleBackColor = True
+        '
+        'volver
+        '
+        Me.volver.CausesValidation = False
+        Me.volver.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.volver.Location = New System.Drawing.Point(-3, 455)
+        Me.volver.Name = "volver"
+        Me.volver.Size = New System.Drawing.Size(214, 55)
+        Me.volver.TabIndex = 41
+        Me.volver.Text = "Volver"
+        Me.volver.UseVisualStyleBackColor = True
         '
         'tarjeta
         '
@@ -113,13 +124,15 @@ Partial Class tarjeta
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_08_003604
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1019, 539)
+        Me.Controls.Add(Me.volver)
+        Me.Controls.Add(Me.retirost)
         Me.Controls.Add(Me.txtPIN)
         Me.Controls.Add(Me.txtNumTarjeta)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "tarjeta"
         Me.Text = "tarjeta"
         Me.ResumeLayout(False)
@@ -129,8 +142,9 @@ Partial Class tarjeta
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents txtNumTarjeta As TextBox
     Friend WithEvents txtPIN As TextBox
+    Friend WithEvents retirost As Button
+    Friend WithEvents volver As Button
 End Class

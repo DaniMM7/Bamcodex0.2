@@ -26,10 +26,11 @@ Partial Class Transferir
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnconfirmar = New System.Windows.Forms.Button()
+        Me.tipo = New System.Windows.Forms.ComboBox()
+        Me.txtingresenumero = New System.Windows.Forms.TextBox()
+        Me.txtingresemonto = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -80,65 +81,60 @@ Partial Class Transferir
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "INGRESE MONTO"
         '
+        'btnconfirmar
+        '
+        Me.btnconfirmar.BackColor = System.Drawing.Color.Transparent
+        Me.btnconfirmar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnconfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnconfirmar.Font = New System.Drawing.Font("Britannic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnconfirmar.ForeColor = System.Drawing.Color.White
+        Me.btnconfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnconfirmar.Location = New System.Drawing.Point(830, 511)
+        Me.btnconfirmar.Name = "btnconfirmar"
+        Me.btnconfirmar.Size = New System.Drawing.Size(256, 71)
+        Me.btnconfirmar.TabIndex = 35
+        Me.btnconfirmar.Text = "Confirmar"
+        Me.btnconfirmar.UseVisualStyleBackColor = False
+        '
+        'tipo
+        '
+        Me.tipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tipo.FormattingEnabled = True
+        Me.tipo.Location = New System.Drawing.Point(344, 182)
+        Me.tipo.Name = "tipo"
+        Me.tipo.Size = New System.Drawing.Size(421, 37)
+        Me.tipo.TabIndex = 36
+        '
+        'txtingresenumero
+        '
+        Me.txtingresenumero.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtingresenumero.Location = New System.Drawing.Point(344, 309)
+        Me.txtingresenumero.Name = "txtingresenumero"
+        Me.txtingresenumero.Size = New System.Drawing.Size(421, 34)
+        Me.txtingresenumero.TabIndex = 37
+        '
+        'txtingresemonto
+        '
+        Me.txtingresemonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtingresemonto.Location = New System.Drawing.Point(368, 446)
+        Me.txtingresemonto.Name = "txtingresemonto"
+        Me.txtingresemonto.Size = New System.Drawing.Size(348, 34)
+        Me.txtingresemonto.TabIndex = 38
+        '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackColor = System.Drawing.Color.Black
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(344, 181)
+        Me.Button1.Location = New System.Drawing.Point(-57, 403)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(421, 45)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        Me.Button1.Size = New System.Drawing.Size(260, 90)
+        Me.Button1.TabIndex = 39
+        Me.Button1.Text = "Regresar"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(344, 305)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(421, 53)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.Transparent
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button3.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(388, 441)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(333, 44)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "xxxxxxxxxxxxxxxxxxxxx"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
-        'Button4
-        '
-        Me.Button4.BackColor = System.Drawing.Color.Transparent
-        Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button4.Font = New System.Drawing.Font("Britannic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(830, 511)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(256, 71)
-        Me.Button4.TabIndex = 35
-        Me.Button4.Text = "Confirmar"
-        Me.Button4.UseVisualStyleBackColor = False
         '
         'Transferir
         '
@@ -147,10 +143,11 @@ Partial Class Transferir
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_023527
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1085, 594)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.txtingresemonto)
+        Me.Controls.Add(Me.txtingresenumero)
+        Me.Controls.Add(Me.tipo)
+        Me.Controls.Add(Me.btnconfirmar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -167,8 +164,9 @@ Partial Class Transferir
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnconfirmar As Button
+    Friend WithEvents tipo As ComboBox
+    Friend WithEvents txtingresenumero As TextBox
+    Friend WithEvents txtingresemonto As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
 End Class

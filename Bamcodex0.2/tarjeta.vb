@@ -64,4 +64,16 @@ Public Class tarjeta
         txtPIN.Clear()
         txtNumTarjeta.Clear()
     End Sub
+
+    Private Sub retirost_Click(sender As Object, e As EventArgs) Handles retirost.Click
+        Dim formTarjeta As New RetiroSinTarjeta()
+        formTarjeta.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles volver.Click
+        Dim form1 As New Form1()
+        form1.Show()
+        Me.Hide()
+    End Sub
 End Class

@@ -99,6 +99,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Historial.Designer.vb">
+      <DependentUpon>Historial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Historial.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -124,6 +130,18 @@
       <DependentUpon>Retirar.vb</DependentUpon>
     </Compile>
     <Compile Include="Retirar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetiroConfirmar.Designer.vb">
+      <DependentUpon>RetiroConfirmar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RetiroConfirmar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RetiroSinTarjeta.Designer.vb">
+      <DependentUpon>RetiroSinTarjeta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RetiroSinTarjeta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Servicios.Designer.vb">
@@ -164,6 +182,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Historial.resx">
+      <DependentUpon>Historial.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -175,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Retirar.resx">
       <DependentUpon>Retirar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetiroConfirmar.resx">
+      <DependentUpon>RetiroConfirmar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RetiroSinTarjeta.resx">
+      <DependentUpon>RetiroSinTarjeta.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Servicios.resx">
       <DependentUpon>Servicios.vb</DependentUpon>
