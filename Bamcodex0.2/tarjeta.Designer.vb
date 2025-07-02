@@ -29,6 +29,7 @@ Partial Class tarjeta
         Me.txtPIN = New System.Windows.Forms.TextBox()
         Me.retirost = New System.Windows.Forms.Button()
         Me.volver = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -52,10 +53,10 @@ Partial Class tarjeta
         Me.Button2.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(233, 330)
+        Me.Button2.Location = New System.Drawing.Point(233, 373)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(156, 36)
+        Me.Button2.Size = New System.Drawing.Size(327, 36)
         Me.Button2.TabIndex = 35
         Me.Button2.Text = "ELIMINAR"
         Me.Button2.UseVisualStyleBackColor = False
@@ -69,7 +70,7 @@ Partial Class tarjeta
         Me.Button4.Font = New System.Drawing.Font("Britannic Bold", 13.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(233, 372)
+        Me.Button4.Location = New System.Drawing.Point(233, 328)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(327, 36)
@@ -117,6 +118,17 @@ Partial Class tarjeta
         Me.volver.Text = "Volver"
         Me.volver.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.CausesValidation = False
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(806, 385)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(214, 55)
+        Me.Button1.TabIndex = 42
+        Me.Button1.Text = "Pagar servicios"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'tarjeta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -124,6 +136,7 @@ Partial Class tarjeta
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_08_003604
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1019, 539)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.volver)
         Me.Controls.Add(Me.retirost)
         Me.Controls.Add(Me.txtPIN)
@@ -147,4 +160,5 @@ Partial Class tarjeta
     Friend WithEvents txtPIN As TextBox
     Friend WithEvents retirost As Button
     Friend WithEvents volver As Button
+    Friend WithEvents Button1 As Button
 End Class

@@ -1,11 +1,14 @@
 ﻿Imports System.Data.SqlClient
 
-<DebuggerDisplay("{GetDebuggerDisplay(),nq}")>
 Public Class Servicios2
     Public Property ConvenioSeleccionado As String
-    Private SaldoDisponible As Decimal = 1000D
+    Private cadenaConexionActual As String = Nothing
     Public Property UsuarioActual As String
 
+    Private servidores As String() = {
+        "Data Source=ASUSVIVOBOOK\INSTANCIA2;Initial Catalog=bancodexxdb;User ID=prueba21;Password=coco",
+        "Data Source=192.168.0.232;Initial Catalog=BDREPO;User ID=pepe4;Password=1234"
+    }
 
     Private Sub Servicios2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -23,7 +26,6 @@ Public Class Servicios2
                 End Using
             End Using
 
-            ' Asignar el servicio seleccionado automáticamente si existe en la lista
             If Not String.IsNullOrEmpty(ConvenioSeleccionado) Then
                 For Each item As String In NomEmpresa.Items
                     If item.Contains(ConvenioSeleccionado) Then
@@ -32,7 +34,6 @@ Public Class Servicios2
                     End If
                 Next
             End If
-
 
         Catch ex As Exception
             MessageBox.Show("Error al cargar convenios: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -44,113 +45,122 @@ Public Class Servicios2
     End Sub
 
     Private Sub RealizarPago_Click(sender As Object, e As EventArgs) Handles RealizarPago.Click
-        Dim numeroTarjeta As String = tarjeta.ClienteNum
+        Dim bancoID As Integer = tarjeta.BancoIDUsuario
+        Dim numeroCuenta As String = tarjeta.NumeroCuentaUsuario
 
-        If String.IsNullOrEmpty(numeroTarjeta) Then
-            MessageBox.Show("No se ha identificado ninguna tarjeta. Por favor, inicie sesión.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        If String.IsNullOrEmpty(numeroCuenta) OrElse bancoID = 0 Then
+            MessageBox.Show("No se ha identificado la cuenta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Exit Sub
         End If
 
-        ' Validar referencia
         If String.IsNullOrWhiteSpace(Referencia.Text) Then
             MessageBox.Show("Por favor ingrese la referencia.", "Falta referencia", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        ' Validar monto
         Dim montoPago As Decimal
-        Dim montoTexto As String = Monto.Text.Replace("$", "").Trim()
-
-        If Not Decimal.TryParse(montoTexto, montoPago) OrElse montoPago <= 0 Then
-            MessageBox.Show("Por favor ingrese un monto válido mayor a cero.", "Monto incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        If Not Decimal.TryParse(Monto.Text.Replace("$", "").Trim(), montoPago) OrElse montoPago <= 0 Then
+            MessageBox.Show("Ingrese un monto válido.", "Monto incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             Exit Sub
         End If
 
-        Try
-            conectar()
+        ' Buscar conexión válida (solo para leer saldo)
+        Dim saldoActual As Decimal = 0
+        Dim saldoObtenido As Boolean = False
+        Dim sqlSaldo As String = "SELECT Saldo FROM CuentasReplica WHERE BancoID = @BancoID AND NumeroCuenta = @NumeroCuenta"
 
-            ' Paso 1: Obtener CuentaID asociado al NumeroTarjeta
-            Dim consultaCuentaID As String = "SELECT CuentaID FROM dbo.Tarjeta WHERE NumeroTarjeta = @NumeroTarjeta"
-            Dim cuentaIDObj As Object = Nothing
-            Using cmdCuentaID As New SqlCommand(consultaCuentaID, conexion_general)
-                cmdCuentaID.Parameters.AddWithValue("@NumeroTarjeta", numeroTarjeta)
-                cuentaIDObj = cmdCuentaID.ExecuteScalar()
-            End Using
+        For Each cadenaConexion In servidores
+            Try
+                Using conn As New SqlConnection(cadenaConexion)
+                    conn.Open()
+                    Using cmd As New SqlCommand(sqlSaldo, conn)
+                        cmd.Parameters.AddWithValue("@BancoID", bancoID)
+                        cmd.Parameters.AddWithValue("@NumeroCuenta", numeroCuenta)
 
-            If cuentaIDObj Is Nothing Then
-                MessageBox.Show("No se encontró una cuenta asociada a la tarjeta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
+                        Dim result = cmd.ExecuteScalar()
+                        If result IsNot Nothing Then
+                            saldoActual = Convert.ToDecimal(result)
+                            cadenaConexionActual = cadenaConexion
+                            saldoObtenido = True
+                            Exit For
+                        End If
+                    End Using
+                End Using
+            Catch ex As Exception
+                ' Continuar con el siguiente servidor
+            End Try
+        Next
 
-            Dim cuentaID As Integer = Convert.ToInt32(cuentaIDObj)
+        If Not saldoObtenido Then
+            MessageBox.Show("No se pudo consultar el saldo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+        End If
 
-            ' Paso 2: Obtener saldo de la cuenta
-            Dim consultaSaldo As String = "SELECT Saldo FROM dbo.Cuentas WHERE CuentaID = @CuentaID"
-            Dim saldoObj As Object = Nothing
-            Using cmdSaldo As New SqlCommand(consultaSaldo, conexion_general)
-                cmdSaldo.Parameters.AddWithValue("@CuentaID", cuentaID)
-                saldoObj = cmdSaldo.ExecuteScalar()
-            End Using
+        If saldoActual < montoPago Then
+            MessageBox.Show("No hay fondos suficientes.", "Saldo insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Exit Sub
+        End If
 
-            If saldoObj Is Nothing Then
-                MessageBox.Show("No se encontró la cuenta para verificar saldo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-            End If
-
-            Dim saldoActual As Decimal = Convert.ToDecimal(saldoObj)
-
-            ' Paso 3: Verificar saldo suficiente
-            If saldoActual < montoPago Then
-                MessageBox.Show("No hay fondos suficientes.", "Saldo insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                Exit Sub
-            End If
-
-            ' Confirmar operación
-            Dim respuesta As DialogResult = MessageBox.Show(
-            $"Realizarás el pago de {Monto.Text} con la tarjeta {numeroTarjeta}.{vbCrLf}¿Deseas continuar?",
+        ' Confirmación
+        If MessageBox.Show(
+            $"Realizarás el pago de {Monto.Text} desde la cuenta {numeroCuenta}.{vbCrLf}¿Deseas continuar?",
             "Confirmar pago",
             MessageBoxButtons.OKCancel,
-            MessageBoxIcon.Question
-        )
+            MessageBoxIcon.Question) <> DialogResult.OK Then
+            Exit Sub
+        End If
 
-            If respuesta <> DialogResult.OK Then
-                Exit Sub
-            End If
-
-            ' Paso 4: Actualizar saldo restando el monto
-            Dim actualizarSaldo As String = "UPDATE dbo.Cuentas SET Saldo = Saldo - @Monto WHERE CuentaID = @CuentaID"
-            Using cmdActualizar As New SqlCommand(actualizarSaldo, conexion_general)
-                cmdActualizar.Parameters.AddWithValue("@Monto", montoPago)
-                cmdActualizar.Parameters.AddWithValue("@CuentaID", cuentaID)
-                Dim filasAfectadas = cmdActualizar.ExecuteNonQuery()
-
-                If filasAfectadas > 0 Then
-                    MessageBox.Show("Pago realizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                Else
-                    MessageBox.Show("Error al actualizar saldo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                End If
+        ' === Paso 1: Actualizar saldo en servidor remoto ===
+        Try
+            Using conn As New SqlConnection(cadenaConexionActual)
+                conn.Open()
+                Dim actualizarSaldo As String = "UPDATE CuentasReplica SET Saldo = Saldo - @Monto WHERE BancoID = @BancoID AND NumeroCuenta = @NumeroCuenta"
+                Using cmdActualizar As New SqlCommand(actualizarSaldo, conn)
+                    cmdActualizar.Parameters.AddWithValue("@Monto", montoPago)
+                    cmdActualizar.Parameters.AddWithValue("@BancoID", bancoID)
+                    cmdActualizar.Parameters.AddWithValue("@NumeroCuenta", numeroCuenta)
+                    cmdActualizar.ExecuteNonQuery()
+                End Using
             End Using
-
         Catch ex As Exception
-            MessageBox.Show("Error en la base de datos: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Error al actualizar el saldo en servidor remoto: " & ex.Message)
+            Exit Sub
+        End Try
+
+        ' === Paso 2: Insertar en Transacciones localmente ===
+        Try
+            conectar()
+            Using trans = conexion_general.BeginTransaction()
+                Try
+                    Dim insertarTransaccion As String = "INSERT INTO Transacciones (TipoTransaccion, Monto, FechaTransaccion, CuentaOrigen, CajeroID) " &
+                                                        "VALUES ('PagoServicio', @Monto, GETDATE(), @CuentaOrigen, 1)"
+                    Using cmdTrans As New SqlCommand(insertarTransaccion, conexion_general, trans)
+                        cmdTrans.Parameters.AddWithValue("@Monto", montoPago)
+                        cmdTrans.Parameters.AddWithValue("@CuentaOrigen", numeroCuenta)
+                        cmdTrans.ExecuteNonQuery()
+                    End Using
+
+                    trans.Commit()
+                    MessageBox.Show("Pago realizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Catch ex As Exception
+                    trans.Rollback()
+                    MessageBox.Show("Error al registrar la transacción local: " & ex.Message)
+                End Try
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error con la base local: " & ex.Message)
         Finally
-            If conexion_general.State = ConnectionState.Open Then
-                conexion_general.Close()
-            End If
+            If conexion_general.State = ConnectionState.Open Then conexion_general.Close()
         End Try
     End Sub
 
-
-
-    ' === Validación para Monto ===
+    ' ==== Validaciones ====
 
     Private Sub Monto_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Monto.KeyPress
-        ' Permitir solo números, punto decimal y teclas de control (como Backspace)
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) AndAlso e.KeyChar <> "." Then
             e.Handled = True
         End If
-
-        ' No permitir más de un punto decimal
         If e.KeyChar = "." AndAlso Monto.Text.Contains(".") Then
             e.Handled = True
         End If
@@ -159,23 +169,15 @@ Public Class Servicios2
     Private Sub Monto_Leave(sender As Object, e As EventArgs) Handles Monto.Leave
         Dim montoDecimal As Decimal
         If Decimal.TryParse(Monto.Text.Replace("$", "").Trim(), montoDecimal) Then
-            Monto.Text = montoDecimal.ToString("C2") ' Ej: $1,234.56
+            Monto.Text = montoDecimal.ToString("C2")
         End If
     End Sub
 
-    ' === Validación para Referencia ===
-
     Private Sub Referencia_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Referencia.KeyPress
-        ' Solo permite números
         If Not Char.IsControl(e.KeyChar) AndAlso Not Char.IsDigit(e.KeyChar) Then
             e.Handled = True
         End If
     End Sub
-
-
-    Private Function GetDebuggerDisplay() As String
-        Return ToString()
-    End Function
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ope As New Servicios()

@@ -1,13 +1,16 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class Historial
-    ' Supón que esta variable contiene el ID de la cuenta actual
-    Private cuentaIDActual As Integer = 1001 ' Cambia este valor según tu contexto
+    ' Obtener el número de cuenta actual directamente de la clase tarjeta
+    Private cuentaNumeroActual As String = tarjeta.NumeroCuentaUsuario
+
+    Private conexionLocal As String = "Data Source=ASUSVIVOBOOK\INSTANCIA2;Initial Catalog=bancodexxdb;Integrated Security=True"
+
     Private Sub Historial_Activated(sender As Object, e As EventArgs) Handles Me.Activated
         CargarMovimientos()
     End Sub
+
     Private Sub Historial_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Cargar tipos de transacciones en ComboBox, incluyendo opción "Todos"
         ComboBoxTipoTransaccion.Items.Clear()
         ComboBoxTipoTransaccion.Items.Add("Todos")
         ComboBoxTipoTransaccion.Items.Add("Donacion")
@@ -15,9 +18,8 @@ Public Class Historial
         ComboBoxTipoTransaccion.Items.Add("Transferencia")
         ComboBoxTipoTransaccion.Items.Add("Deposito")
         ComboBoxTipoTransaccion.Items.Add("Retiro")
-        ComboBoxTipoTransaccion.SelectedIndex = 0 ' Seleccionar "Todos" por defecto
+        ComboBoxTipoTransaccion.SelectedIndex = 0
 
-        ' Cargar todos los movimientos al iniciar
         CargarMovimientos()
     End Sub
 
@@ -27,8 +29,6 @@ Public Class Historial
 
     Private Sub CargarMovimientos()
         Dim tipoTransaccion As String = ComboBoxTipoTransaccion.SelectedItem.ToString()
-
-        Dim cadenaConexion As String = "Data Source=ASUSVIVOBOOK\INSTANCIA2;Initial Catalog=bancodexxdb;Integrated Security=True"
 
         Dim consulta As String
         If tipoTransaccion = "Todos" Then
@@ -43,11 +43,11 @@ Public Class Historial
                        "ORDER BY FechaTransaccion DESC"
         End If
 
-        Using conexion As New SqlConnection(cadenaConexion)
+        Using conexion As New SqlConnection(conexionLocal)
             Try
                 conexion.Open()
                 Using comando As New SqlCommand(consulta, conexion)
-                    comando.Parameters.AddWithValue("@CuentaOrigen", cuentaIDActual)
+                    comando.Parameters.AddWithValue("@CuentaOrigen", cuentaNumeroActual)
                     If tipoTransaccion <> "Todos" Then
                         comando.Parameters.AddWithValue("@TipoTransaccion", tipoTransaccion)
                     End If

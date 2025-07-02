@@ -1,48 +1,77 @@
 ﻿Imports System.Data.SqlClient
+
+
 Public Class tarjeta
-    Dim com As SqlCommand
-    Dim dr As SqlDataReader
-    Dim sql As String
-    Dim tarjeta As String
-    Dim pin As String
-    Dim res As Integer
-    Public Shared ClienteNum As String
+    Public Shared NumeroCuentaUsuario As String
+    Public Shared BancoIDUsuario As Integer
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        tarjeta = txtNumTarjeta.Text
-        pin = txtPIN.Text
-        ' Construir la consulta SQL correctamente
-        sql = "EXEC sp_ValidarPIN @NumeroTarjeta = '" & tarjeta & "', @PIN = '" & pin & "'"
-        Try
-            ' Conectar a la base de datos
-            conectar()
-            Dim com As New SqlCommand(sql, conexion_general)
+        NumeroCuentaUsuario = txtNumTarjeta.Text.Trim()
+        Dim nipIngresado As String = txtPIN.Text.Trim()
 
-            ' Ejecutar el comando
-            Dim dr As SqlDataReader = com.ExecuteReader()
+        If NumeroCuentaUsuario = "" OrElse nipIngresado = "" Then
+            MsgBox("Debe ingresar número de cuenta y NIP.", MsgBoxStyle.Exclamation, "Faltan datos")
+            Exit Sub
+        End If
 
-            ' Leer el resultado
-            If dr.HasRows Then
-                ' Si devuelve filas, el PIN es correcto
-                ClienteNum = tarjeta
-                MsgBox("Bienvenido(a)")
-                operaciones.Show()
-                Me.Hide()
-            Else
-                ' No devolvió filas: PIN incorrecto o tarjeta no encontrada
-                MsgBox("Contraseña o número de tarjeta incorrectos.")
+        ' Intentar primero en el servidor local (BancoID 19)
+        Dim servidores As String() = {
+        "Data Source=ASUSVIVOBOOK\INSTANCIA2;Initial Catalog=bancodexxdb;User ID=prueba21;Password=coco",      ' TU servidor (019)
+        "Data Source=192.168.0.232;Initial Catalog=BDREPO;User ID=pepe4;Password=1234"
+        }
+        ' "Data Source=192.168.0.152;Initial Catalog=BancoMazebankone;User ID=PBANCO;Password=1234",
+        '"Data Source=192.168.0.129;Initial Catalog=CajeroBueno;User ID=PBANCO;Password=1234",
+        '"Data Source=192.168.0.173;Initial Catalog=BancoDB1;User ID=pepe4;Password=1234",
+        '"Data Source=192.168.0.178;Initial Catalog=BANCO;User ID=AMVAL;Password=12345"
+
+        Dim conectado As Boolean = False
+
+        For Each cadena In servidores
+            If IntentarLoginTarjeta(cadena, nipIngresado) Then
+                conectado = True
+                Exit For
             End If
+        Next
 
-            dr.Close()
-        Catch ex As Exception
-            MsgBox("Ocurrió un error: " & ex.Message)
-        Finally
-            ' Asegurarse de cerrar la conexión
-            If conexion_general.State = ConnectionState.Open Then
-                conexion_general.Close()
-            End If
-        End Try
+        If Not conectado Then
+            MsgBox("Cuenta o NIP incorrectos.", MsgBoxStyle.Critical, "Error")
+        End If
     End Sub
+    Private Function IntentarLoginTarjeta(cadenaConexion As String, nip As String) As Boolean
+        Try
+            Using conn As New SqlConnection(cadenaConexion)
+                conn.Open()
+
+                MsgBox("Probando servidor: " & cadenaConexion) ' <-- Esto te ayudará a ver si pasa por ahí
+
+                Dim query As String = "
+                SELECT BancoID, CuentaID
+                FROM CuentasReplica
+                WHERE NumeroCuenta = @cuenta AND NIP = @nip
+            "
+
+                Using cmd As New SqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@cuenta", NumeroCuentaUsuario)
+                    cmd.Parameters.AddWithValue("@nip", nip)
+
+                    Dim reader = cmd.ExecuteReader()
+                    If reader.Read() Then
+                        BancoIDUsuario = Convert.ToInt32(reader("BancoID"))
+                        reader.Close()
+
+                        MsgBox("Cuenta encontrada en: " & cadenaConexion) ' <-- Depuración clave
+                        operaciones.Show()
+                        Me.Hide()
+                        Return True
+                    End If
+                End Using
+            End Using
+        Catch ex As Exception
+            MsgBox("Error al conectar a: " & cadenaConexion & vbCrLf & ex.Message) ' Importante para saber si falla
+        End Try
+
+        Return False
+    End Function
 
     Private Sub tarjeta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -74,6 +103,12 @@ Public Class tarjeta
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles volver.Click
         Dim form1 As New Form1()
         form1.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim formServ As New ServiciosSinTarjeta()
+        formServ.Show()
         Me.Hide()
     End Sub
 End Class
