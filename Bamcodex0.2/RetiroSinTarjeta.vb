@@ -54,4 +54,8 @@
         ope.Show()
         Me.Hide()
     End Sub
+
+    Private Sub TxtMontoPersonalizado_TextChanged(sender As Object, e As EventArgs) Handles TxtMontoPersonalizado.TextChanged
+
+    End Sub
 End Class

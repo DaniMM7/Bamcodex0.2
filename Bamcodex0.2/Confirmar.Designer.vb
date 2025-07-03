@@ -35,9 +35,9 @@ Partial Class Confirmar
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(18, 42)
+        Me.Label1.Location = New System.Drawing.Point(16, 34)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(401, 58)
+        Me.Label1.Size = New System.Drawing.Size(330, 48)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Confirmar datos"
         '
@@ -47,9 +47,9 @@ Partial Class Confirmar
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Britannic Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(24, 175)
+        Me.Label2.Location = New System.Drawing.Point(21, 140)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(300, 31)
+        Me.Label2.Size = New System.Drawing.Size(244, 26)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Nro de cuenta o tarjeta"
         '
@@ -59,9 +59,9 @@ Partial Class Confirmar
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Britannic Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(21, 366)
+        Me.Label4.Location = New System.Drawing.Point(19, 293)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(258, 31)
+        Me.Label4.Size = New System.Drawing.Size(209, 26)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "Importe a depositar"
         '
@@ -71,9 +71,9 @@ Partial Class Confirmar
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Britannic Bold", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(24, 534)
+        Me.Label6.Location = New System.Drawing.Point(21, 427)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(166, 31)
+        Me.Label6.Size = New System.Drawing.Size(134, 26)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "Destinatario"
         '
@@ -85,26 +85,28 @@ Partial Class Confirmar
         Me.Button4.Font = New System.Drawing.Font("Britannic Bold", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
         Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(951, 640)
+        Me.Button4.Location = New System.Drawing.Point(845, 512)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(297, 111)
+        Me.Button4.Size = New System.Drawing.Size(264, 89)
         Me.Button4.TabIndex = 34
         Me.Button4.Text = "Confirmar"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'Confirmar
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_022550
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1248, 757)
+        Me.ClientSize = New System.Drawing.Size(1109, 606)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.DoubleBuffered = True
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Confirmar"
         Me.Text = "Confirmar"
         Me.ResumeLayout(False)

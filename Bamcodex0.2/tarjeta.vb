@@ -100,15 +100,16 @@ Public Class tarjeta
         Me.Hide()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles volver.Click
-        Dim form1 As New Form1()
-        form1.Show()
-        Me.Hide()
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim formServ As New ServiciosSinTarjeta()
         formServ.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnPagar_Click(sender As Object, e As EventArgs) Handles btnPagar.Click
+        Dim form1 As New Form1()
+        form1.Show()
         Me.Hide()
     End Sub
 End Class

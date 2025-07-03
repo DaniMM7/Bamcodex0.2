@@ -40,11 +40,10 @@ Partial Class RetiroSinTarjeta
         Me.BtnMonto1000.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnMonto1000.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMonto1000.ForeColor = System.Drawing.Color.White
-        Me.BtnMonto1000.Image = Global.Bamcodex0._2.My.Resources.Resources.preguntas_mas_frecuentes__2_
         Me.BtnMonto1000.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMonto1000.Location = New System.Drawing.Point(81, 155)
+        Me.BtnMonto1000.Location = New System.Drawing.Point(0, 155)
         Me.BtnMonto1000.Name = "BtnMonto1000"
-        Me.BtnMonto1000.Size = New System.Drawing.Size(329, 115)
+        Me.BtnMonto1000.Size = New System.Drawing.Size(313, 115)
         Me.BtnMonto1000.TabIndex = 21
         Me.BtnMonto1000.Text = "$1,000"
         Me.BtnMonto1000.UseVisualStyleBackColor = False
@@ -56,11 +55,10 @@ Partial Class RetiroSinTarjeta
         Me.BtnMonto500.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnMonto500.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMonto500.ForeColor = System.Drawing.Color.White
-        Me.BtnMonto500.Image = Global.Bamcodex0._2.My.Resources.Resources.preguntas_mas_frecuentes__2_
         Me.BtnMonto500.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMonto500.Location = New System.Drawing.Point(81, 297)
+        Me.BtnMonto500.Location = New System.Drawing.Point(12, 297)
         Me.BtnMonto500.Name = "BtnMonto500"
-        Me.BtnMonto500.Size = New System.Drawing.Size(329, 115)
+        Me.BtnMonto500.Size = New System.Drawing.Size(301, 115)
         Me.BtnMonto500.TabIndex = 22
         Me.BtnMonto500.Text = "$500"
         Me.BtnMonto500.UseVisualStyleBackColor = False
@@ -72,11 +70,10 @@ Partial Class RetiroSinTarjeta
         Me.BtnMonto300.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnMonto300.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMonto300.ForeColor = System.Drawing.Color.White
-        Me.BtnMonto300.Image = Global.Bamcodex0._2.My.Resources.Resources.preguntas_mas_frecuentes__2_
         Me.BtnMonto300.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnMonto300.Location = New System.Drawing.Point(81, 438)
+        Me.BtnMonto300.Location = New System.Drawing.Point(12, 438)
         Me.BtnMonto300.Name = "BtnMonto300"
-        Me.BtnMonto300.Size = New System.Drawing.Size(329, 115)
+        Me.BtnMonto300.Size = New System.Drawing.Size(301, 115)
         Me.BtnMonto300.TabIndex = 23
         Me.BtnMonto300.Text = "$200"
         Me.BtnMonto300.UseVisualStyleBackColor = False
@@ -88,7 +85,6 @@ Partial Class RetiroSinTarjeta
         Me.BtnMonto100.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.BtnMonto100.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnMonto100.ForeColor = System.Drawing.Color.White
-        Me.BtnMonto100.Image = Global.Bamcodex0._2.My.Resources.Resources.preguntas_mas_frecuentes__2_
         Me.BtnMonto100.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BtnMonto100.Location = New System.Drawing.Point(775, 155)
         Me.BtnMonto100.Name = "BtnMonto100"
@@ -105,9 +101,9 @@ Partial Class RetiroSinTarjeta
         Me.BtnOtroMonto.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnOtroMonto.ForeColor = System.Drawing.Color.White
         Me.BtnOtroMonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnOtroMonto.Location = New System.Drawing.Point(738, 288)
+        Me.BtnOtroMonto.Location = New System.Drawing.Point(775, 288)
         Me.BtnOtroMonto.Name = "BtnOtroMonto"
-        Me.BtnOtroMonto.Size = New System.Drawing.Size(329, 115)
+        Me.BtnOtroMonto.Size = New System.Drawing.Size(256, 115)
         Me.BtnOtroMonto.TabIndex = 25
         Me.BtnOtroMonto.Text = "otro monto"
         Me.BtnOtroMonto.UseVisualStyleBackColor = False
@@ -120,9 +116,9 @@ Partial Class RetiroSinTarjeta
         Me.BtnConfirmar.Font = New System.Drawing.Font("Britannic Bold", 25.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnConfirmar.ForeColor = System.Drawing.Color.White
         Me.BtnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.BtnConfirmar.Location = New System.Drawing.Point(755, 424)
+        Me.BtnConfirmar.Location = New System.Drawing.Point(775, 424)
         Me.BtnConfirmar.Name = "BtnConfirmar"
-        Me.BtnConfirmar.Size = New System.Drawing.Size(329, 115)
+        Me.BtnConfirmar.Size = New System.Drawing.Size(256, 115)
         Me.BtnConfirmar.TabIndex = 26
         Me.BtnConfirmar.Text = "Confirmar"
         Me.BtnConfirmar.UseVisualStyleBackColor = False
@@ -130,9 +126,9 @@ Partial Class RetiroSinTarjeta
         'TxtMontoPersonalizado
         '
         Me.TxtMontoPersonalizado.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtMontoPersonalizado.Location = New System.Drawing.Point(598, 319)
+        Me.TxtMontoPersonalizado.Location = New System.Drawing.Point(470, 288)
         Me.TxtMontoPersonalizado.Name = "TxtMontoPersonalizado"
-        Me.TxtMontoPersonalizado.Size = New System.Drawing.Size(146, 38)
+        Me.TxtMontoPersonalizado.Size = New System.Drawing.Size(191, 38)
         Me.TxtMontoPersonalizado.TabIndex = 27
         '
         'Button1

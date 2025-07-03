@@ -81,7 +81,7 @@ Partial Class Retirar
         Me.llbl.BackColor = System.Drawing.Color.Transparent
         Me.llbl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.llbl.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.llbl.Font = New System.Drawing.Font("Britannic Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.llbl.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.llbl.ForeColor = System.Drawing.Color.White
         Me.llbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.llbl.Location = New System.Drawing.Point(458, 81)
@@ -183,7 +183,7 @@ Partial Class Retirar
         'txtOtroMonto
         '
         Me.txtOtroMonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtOtroMonto.Location = New System.Drawing.Point(536, 308)
+        Me.txtOtroMonto.Location = New System.Drawing.Point(458, 243)
         Me.txtOtroMonto.Name = "txtOtroMonto"
         Me.txtOtroMonto.Size = New System.Drawing.Size(223, 38)
         Me.txtOtroMonto.TabIndex = 28

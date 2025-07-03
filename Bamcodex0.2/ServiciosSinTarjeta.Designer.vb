@@ -34,37 +34,41 @@ Partial Class ServiciosSinTarjeta
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnPagar = New System.Windows.Forms.Button()
         Me.PanelError = New System.Windows.Forms.Panel()
-        Me.lblError = New System.Windows.Forms.TextBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblError = New System.Windows.Forms.TextBox()
         Me.PanelError.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtMonto
         '
-        Me.txtMonto.Location = New System.Drawing.Point(298, 433)
+        Me.txtMonto.BackColor = System.Drawing.Color.MistyRose
+        Me.txtMonto.Location = New System.Drawing.Point(298, 424)
         Me.txtMonto.Margin = New System.Windows.Forms.Padding(4)
         Me.txtMonto.Multiline = True
         Me.txtMonto.Name = "txtMonto"
-        Me.txtMonto.Size = New System.Drawing.Size(341, 41)
+        Me.txtMonto.Size = New System.Drawing.Size(341, 50)
         Me.txtMonto.TabIndex = 47
         '
         'txtReferencia
         '
-        Me.txtReferencia.Location = New System.Drawing.Point(298, 330)
+        Me.txtReferencia.BackColor = System.Drawing.Color.MistyRose
+        Me.txtReferencia.Location = New System.Drawing.Point(298, 320)
         Me.txtReferencia.Margin = New System.Windows.Forms.Padding(4)
         Me.txtReferencia.Multiline = True
         Me.txtReferencia.Name = "txtReferencia"
-        Me.txtReferencia.Size = New System.Drawing.Size(341, 40)
+        Me.txtReferencia.Size = New System.Drawing.Size(352, 57)
         Me.txtReferencia.TabIndex = 46
         '
         'cboConvenios
         '
+        Me.cboConvenios.BackColor = System.Drawing.Color.MistyRose
+        Me.cboConvenios.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboConvenios.FormattingEnabled = True
         Me.cboConvenios.Location = New System.Drawing.Point(298, 230)
         Me.cboConvenios.Margin = New System.Windows.Forms.Padding(4)
         Me.cboConvenios.Name = "cboConvenios"
-        Me.cboConvenios.Size = New System.Drawing.Size(336, 24)
+        Me.cboConvenios.Size = New System.Drawing.Size(341, 37)
         Me.cboConvenios.TabIndex = 45
         '
         'Label5
@@ -135,9 +139,9 @@ Partial Class ServiciosSinTarjeta
         Me.btnCancelar.Font = New System.Drawing.Font("Britannic Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.White
         Me.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCancelar.Location = New System.Drawing.Point(-38, 438)
+        Me.btnCancelar.Location = New System.Drawing.Point(799, 398)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(260, 39)
+        Me.btnCancelar.Size = New System.Drawing.Size(195, 62)
         Me.btnCancelar.TabIndex = 49
         Me.btnCancelar.Text = "Regresar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -150,10 +154,10 @@ Partial Class ServiciosSinTarjeta
         Me.btnPagar.Font = New System.Drawing.Font("Britannic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnPagar.ForeColor = System.Drawing.Color.White
         Me.btnPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnPagar.Location = New System.Drawing.Point(697, 475)
+        Me.btnPagar.Location = New System.Drawing.Point(702, 475)
         Me.btnPagar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnPagar.Name = "btnPagar"
-        Me.btnPagar.Size = New System.Drawing.Size(332, 102)
+        Me.btnPagar.Size = New System.Drawing.Size(327, 102)
         Me.btnPagar.TabIndex = 48
         Me.btnPagar.Text = "Realizar pago"
         Me.btnPagar.UseVisualStyleBackColor = False
@@ -165,9 +169,19 @@ Partial Class ServiciosSinTarjeta
         Me.PanelError.Controls.Add(Me.lblError)
         Me.PanelError.Location = New System.Drawing.Point(0, 45)
         Me.PanelError.Name = "PanelError"
-        Me.PanelError.Size = New System.Drawing.Size(276, 189)
+        Me.PanelError.Size = New System.Drawing.Size(276, 167)
         Me.PanelError.TabIndex = 51
         Me.PanelError.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(208, 100)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(65, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'lblError
         '
@@ -181,16 +195,6 @@ Partial Class ServiciosSinTarjeta
         Me.lblError.ReadOnly = True
         Me.lblError.Size = New System.Drawing.Size(245, 91)
         Me.lblError.TabIndex = 0
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(208, 116)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(65, 60)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
         '
         'ServiciosSinTarjeta
         '

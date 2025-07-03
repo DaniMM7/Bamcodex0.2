@@ -22,6 +22,7 @@ Partial Class Servicios2
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Servicios2))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,6 +33,11 @@ Partial Class Servicios2
         Me.Referencia = New System.Windows.Forms.TextBox()
         Me.Monto = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PanelError = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblError = New System.Windows.Forms.TextBox()
+        Me.PanelError.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -112,29 +118,32 @@ Partial Class Servicios2
         '
         'NomEmpresa
         '
+        Me.NomEmpresa.BackColor = System.Drawing.Color.MistyRose
         Me.NomEmpresa.FormattingEnabled = True
         Me.NomEmpresa.Location = New System.Drawing.Point(349, 236)
-        Me.NomEmpresa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NomEmpresa.Margin = New System.Windows.Forms.Padding(4)
         Me.NomEmpresa.Name = "NomEmpresa"
         Me.NomEmpresa.Size = New System.Drawing.Size(400, 24)
         Me.NomEmpresa.TabIndex = 37
         '
         'Referencia
         '
-        Me.Referencia.Location = New System.Drawing.Point(349, 334)
-        Me.Referencia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Referencia.BackColor = System.Drawing.Color.MistyRose
+        Me.Referencia.Location = New System.Drawing.Point(340, 328)
+        Me.Referencia.Margin = New System.Windows.Forms.Padding(4)
         Me.Referencia.Multiline = True
         Me.Referencia.Name = "Referencia"
-        Me.Referencia.Size = New System.Drawing.Size(400, 40)
+        Me.Referencia.Size = New System.Drawing.Size(409, 52)
         Me.Referencia.TabIndex = 38
         '
         'Monto
         '
-        Me.Monto.Location = New System.Drawing.Point(349, 438)
-        Me.Monto.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Monto.BackColor = System.Drawing.Color.MistyRose
+        Me.Monto.Location = New System.Drawing.Point(340, 436)
+        Me.Monto.Margin = New System.Windows.Forms.Padding(4)
         Me.Monto.Multiline = True
         Me.Monto.Name = "Monto"
-        Me.Monto.Size = New System.Drawing.Size(400, 41)
+        Me.Monto.Size = New System.Drawing.Size(409, 52)
         Me.Monto.TabIndex = 39
         '
         'Button1
@@ -152,6 +161,40 @@ Partial Class Servicios2
         Me.Button1.Text = "Regresar"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'PanelError
+        '
+        Me.PanelError.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PanelError.Controls.Add(Me.PictureBox1)
+        Me.PanelError.Controls.Add(Me.lblError)
+        Me.PanelError.Location = New System.Drawing.Point(1, 28)
+        Me.PanelError.Name = "PanelError"
+        Me.PanelError.Size = New System.Drawing.Size(276, 167)
+        Me.PanelError.TabIndex = 53
+        Me.PanelError.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(208, 100)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(65, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'lblError
+        '
+        Me.lblError.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblError.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblError.ForeColor = System.Drawing.Color.White
+        Me.lblError.Location = New System.Drawing.Point(8, 14)
+        Me.lblError.Multiline = True
+        Me.lblError.Name = "lblError"
+        Me.lblError.ReadOnly = True
+        Me.lblError.Size = New System.Drawing.Size(245, 91)
+        Me.lblError.TabIndex = 0
+        '
         'Servicios2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -159,6 +202,7 @@ Partial Class Servicios2
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_024634
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1141, 583)
+        Me.Controls.Add(Me.PanelError)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Monto)
         Me.Controls.Add(Me.Referencia)
@@ -173,6 +217,9 @@ Partial Class Servicios2
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Servicios2"
         Me.Text = "Servicios2"
+        Me.PanelError.ResumeLayout(False)
+        Me.PanelError.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +235,7 @@ Partial Class Servicios2
     Friend WithEvents Referencia As TextBox
     Friend WithEvents Monto As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents PanelError As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblError As TextBox
 End Class

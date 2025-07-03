@@ -31,6 +31,7 @@ Partial Class Historial
         '
         'ComboBoxTipoTransaccion
         '
+        Me.ComboBoxTipoTransaccion.BackColor = System.Drawing.Color.MistyRose
         Me.ComboBoxTipoTransaccion.FormattingEnabled = True
         Me.ComboBoxTipoTransaccion.Location = New System.Drawing.Point(45, 83)
         Me.ComboBoxTipoTransaccion.Name = "ComboBoxTipoTransaccion"
@@ -39,8 +40,9 @@ Partial Class Historial
         '
         'DataGridViewMovimientos
         '
+        Me.DataGridViewMovimientos.BackgroundColor = System.Drawing.Color.MistyRose
         Me.DataGridViewMovimientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewMovimientos.Location = New System.Drawing.Point(45, 134)
+        Me.DataGridViewMovimientos.Location = New System.Drawing.Point(45, 129)
         Me.DataGridViewMovimientos.Name = "DataGridViewMovimientos"
         Me.DataGridViewMovimientos.RowHeadersWidth = 51
         Me.DataGridViewMovimientos.RowTemplate.Height = 24
@@ -55,7 +57,7 @@ Partial Class Historial
         Me.Button1.Font = New System.Drawing.Font("Britannic Bold", 16.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(-2, 432)
+        Me.Button1.Location = New System.Drawing.Point(-37, 466)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(260, 39)
         Me.Button1.TabIndex = 36
@@ -67,10 +69,12 @@ Partial Class Historial
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(763, 474)
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(769, 519)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridViewMovimientos)
         Me.Controls.Add(Me.ComboBoxTipoTransaccion)
+        Me.DoubleBuffered = True
         Me.Name = "Historial"
         Me.Text = "Historial"
         CType(Me.DataGridViewMovimientos, System.ComponentModel.ISupportInitialize).EndInit()

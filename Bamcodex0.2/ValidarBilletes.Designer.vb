@@ -47,11 +47,11 @@ Partial Class ValidarBilletes
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Lemontea", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(372, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(302, 42)
+        Me.Label1.Size = New System.Drawing.Size(258, 38)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Insertar Billetes"
         '
@@ -218,7 +218,7 @@ Partial Class ValidarBilletes
         Me.RealizarPago.Location = New System.Drawing.Point(546, 230)
         Me.RealizarPago.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.RealizarPago.Name = "RealizarPago"
-        Me.RealizarPago.Size = New System.Drawing.Size(264, 102)
+        Me.RealizarPago.Size = New System.Drawing.Size(248, 102)
         Me.RealizarPago.TabIndex = 49
         Me.RealizarPago.Text = "Salir"
         Me.RealizarPago.UseVisualStyleBackColor = False
@@ -231,10 +231,10 @@ Partial Class ValidarBilletes
         Me.btnConfirmar.Font = New System.Drawing.Font("Britannic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnConfirmar.ForeColor = System.Drawing.Color.White
         Me.btnConfirmar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnConfirmar.Location = New System.Drawing.Point(635, 476)
+        Me.btnConfirmar.Location = New System.Drawing.Point(658, 476)
         Me.btnConfirmar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnConfirmar.Name = "btnConfirmar"
-        Me.btnConfirmar.Size = New System.Drawing.Size(264, 102)
+        Me.btnConfirmar.Size = New System.Drawing.Size(223, 102)
         Me.btnConfirmar.TabIndex = 50
         Me.btnConfirmar.Text = "Confirmar"
         Me.btnConfirmar.UseVisualStyleBackColor = False

@@ -23,6 +23,7 @@ Partial Class Depositar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Depositar))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -31,6 +32,11 @@ Partial Class Depositar
         Me.txtCuenta = New System.Windows.Forms.TextBox()
         Me.txtImporte = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.PanelError = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblError = New System.Windows.Forms.TextBox()
+        Me.PanelError.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -92,18 +98,22 @@ Partial Class Depositar
         '
         'txtCuenta
         '
-        Me.txtCuenta.Location = New System.Drawing.Point(288, 210)
+        Me.txtCuenta.BackColor = System.Drawing.Color.MistyRose
+        Me.txtCuenta.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCuenta.Location = New System.Drawing.Point(273, 199)
         Me.txtCuenta.Multiline = True
         Me.txtCuenta.Name = "txtCuenta"
-        Me.txtCuenta.Size = New System.Drawing.Size(471, 29)
+        Me.txtCuenta.Size = New System.Drawing.Size(509, 54)
         Me.txtCuenta.TabIndex = 33
         '
         'txtImporte
         '
-        Me.txtImporte.Location = New System.Drawing.Point(368, 374)
+        Me.txtImporte.BackColor = System.Drawing.Color.MistyRose
+        Me.txtImporte.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtImporte.Location = New System.Drawing.Point(353, 367)
         Me.txtImporte.Multiline = True
         Me.txtImporte.Name = "txtImporte"
-        Me.txtImporte.Size = New System.Drawing.Size(296, 29)
+        Me.txtImporte.Size = New System.Drawing.Size(339, 42)
         Me.txtImporte.TabIndex = 34
         '
         'Button1
@@ -121,6 +131,40 @@ Partial Class Depositar
         Me.Button1.Text = "Regresar"
         Me.Button1.UseVisualStyleBackColor = False
         '
+        'PanelError
+        '
+        Me.PanelError.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PanelError.Controls.Add(Me.PictureBox1)
+        Me.PanelError.Controls.Add(Me.lblError)
+        Me.PanelError.Location = New System.Drawing.Point(1, 32)
+        Me.PanelError.Name = "PanelError"
+        Me.PanelError.Size = New System.Drawing.Size(276, 167)
+        Me.PanelError.TabIndex = 52
+        Me.PanelError.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(208, 100)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(65, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'lblError
+        '
+        Me.lblError.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblError.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblError.ForeColor = System.Drawing.Color.White
+        Me.lblError.Location = New System.Drawing.Point(8, 14)
+        Me.lblError.Multiline = True
+        Me.lblError.Name = "lblError"
+        Me.lblError.ReadOnly = True
+        Me.lblError.Size = New System.Drawing.Size(245, 91)
+        Me.lblError.TabIndex = 0
+        '
         'Depositar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -128,6 +172,7 @@ Partial Class Depositar
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_021807
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1081, 594)
+        Me.Controls.Add(Me.PanelError)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.txtImporte)
         Me.Controls.Add(Me.txtCuenta)
@@ -138,6 +183,9 @@ Partial Class Depositar
         Me.DoubleBuffered = True
         Me.Name = "Depositar"
         Me.Text = "Depositar"
+        Me.PanelError.ResumeLayout(False)
+        Me.PanelError.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -151,4 +199,7 @@ Partial Class Depositar
     Friend WithEvents txtCuenta As TextBox
     Friend WithEvents txtImporte As TextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents PanelError As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblError As TextBox
 End Class

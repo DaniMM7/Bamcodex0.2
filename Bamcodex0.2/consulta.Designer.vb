@@ -22,6 +22,7 @@ Partial Class consulta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(consulta))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -29,6 +30,11 @@ Partial Class consulta
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Saldoact = New System.Windows.Forms.Label()
         Me.SaldoCajero = New System.Windows.Forms.Label()
+        Me.PanelError = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblError = New System.Windows.Forms.TextBox()
+        Me.PanelError.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -97,20 +103,58 @@ Partial Class consulta
         'Saldoact
         '
         Me.Saldoact.AutoSize = True
-        Me.Saldoact.Location = New System.Drawing.Point(495, 253)
+        Me.Saldoact.BackColor = System.Drawing.Color.Transparent
+        Me.Saldoact.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Saldoact.Location = New System.Drawing.Point(492, 241)
         Me.Saldoact.Name = "Saldoact"
-        Me.Saldoact.Size = New System.Drawing.Size(48, 16)
+        Me.Saldoact.Size = New System.Drawing.Size(33, 34)
         Me.Saldoact.TabIndex = 31
-        Me.Saldoact.Text = "Label4"
+        Me.Saldoact.Text = "a"
         '
         'SaldoCajero
         '
         Me.SaldoCajero.AutoSize = True
-        Me.SaldoCajero.Location = New System.Drawing.Point(498, 403)
+        Me.SaldoCajero.BackColor = System.Drawing.Color.Transparent
+        Me.SaldoCajero.Font = New System.Drawing.Font("Arial Rounded MT Bold", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SaldoCajero.Location = New System.Drawing.Point(452, 397)
         Me.SaldoCajero.Name = "SaldoCajero"
-        Me.SaldoCajero.Size = New System.Drawing.Size(48, 16)
+        Me.SaldoCajero.Size = New System.Drawing.Size(114, 34)
         Me.SaldoCajero.TabIndex = 32
         Me.SaldoCajero.Text = "Label6"
+        '
+        'PanelError
+        '
+        Me.PanelError.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.PanelError.Controls.Add(Me.PictureBox1)
+        Me.PanelError.Controls.Add(Me.lblError)
+        Me.PanelError.Location = New System.Drawing.Point(2, 22)
+        Me.PanelError.Name = "PanelError"
+        Me.PanelError.Size = New System.Drawing.Size(276, 167)
+        Me.PanelError.TabIndex = 53
+        Me.PanelError.Visible = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(208, 100)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(65, 60)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'lblError
+        '
+        Me.lblError.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblError.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.lblError.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblError.ForeColor = System.Drawing.Color.White
+        Me.lblError.Location = New System.Drawing.Point(8, 14)
+        Me.lblError.Multiline = True
+        Me.lblError.Name = "lblError"
+        Me.lblError.ReadOnly = True
+        Me.lblError.Size = New System.Drawing.Size(245, 91)
+        Me.lblError.TabIndex = 0
         '
         'consulta
         '
@@ -119,6 +163,7 @@ Partial Class consulta
         Me.BackgroundImage = Global.Bamcodex0._2.My.Resources.Resources.Captura_de_pantalla_2025_06_11_020704
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1035, 583)
+        Me.Controls.Add(Me.PanelError)
         Me.Controls.Add(Me.SaldoCajero)
         Me.Controls.Add(Me.Saldoact)
         Me.Controls.Add(Me.Button2)
@@ -129,6 +174,9 @@ Partial Class consulta
         Me.DoubleBuffered = True
         Me.Name = "consulta"
         Me.Text = "consulta"
+        Me.PanelError.ResumeLayout(False)
+        Me.PanelError.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -141,4 +189,7 @@ Partial Class consulta
     Friend WithEvents Button2 As Button
     Friend WithEvents Saldoact As Label
     Friend WithEvents SaldoCajero As Label
+    Friend WithEvents PanelError As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblError As TextBox
 End Class
